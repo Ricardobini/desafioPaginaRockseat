@@ -1,0 +1,37 @@
+{% extends "layout.njk" %}
+
+{% block header %}
+<link rel="stylesheet" href="courses.css">
+<title>Cursos</title>
+{% endblock %}
+ 
+{% block content %}
+
+<div class="cards">
+    {% for item in items %}
+        <div class="card" id="{{item.id}}">
+            <img src="{{item.img}}" alt="">
+            <div class="card-info">
+                <p>{{item.title}}</p>
+            </div>
+            <div class="card-content">
+                <div class="module">
+                    <p>{{item.duration}}  </p>
+                </div>
+                <div class="price">
+                    <p>{{item.price}}</p>
+                </div>
+                
+            </div>
+        </div>
+    {% endfor %}
+    
+
+</div>
+
+
+<script src="scripts.js"></script>
+{% endblock %}
+
+
+    
